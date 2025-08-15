@@ -1,171 +1,471 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RKS Corporate Travels</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-    body {
-        overflow-x: hidden;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RKS Corporate Travels — Chennai | Employee Transport & Corporate Mobility</title>
+  <meta name="description" content="Safe, reliable, and cost‑effective employee transportation for IT, BPO, and manufacturing companies in Chennai. Airport transfers, staff shuttles, corporate outings."/>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{
+      --rk-primary:#0d3b66; /* Deep blue */
+      --rk-accent:#2ec4b6; /* Teal */
+      --rk-warm:#ffbf69;   /* Warm accent */
     }
-    /* Hero Slideshow */
-    .hero {
-        position: relative;
-        height: 100vh;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-    }
-    .slideshow {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-    .slideshow img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0;
-        animation: slideShow 20s infinite;
-    }
-    .slideshow img:nth-child(1) { animation-delay: 0s; }
-    .slideshow img:nth-child(2) { animation-delay: 5s; }
-    .slideshow img:nth-child(3) { animation-delay: 10s; }
-    .slideshow img:nth-child(4) { animation-delay: 15s; }
-
-    @keyframes slideShow {
-        0% {opacity: 0;}
-        5% {opacity: 1;}
-        25% {opacity: 1;}
-        30% {opacity: 0;}
-        100% {opacity: 0;}
-    }
-
-    /* Service Images Hover */
-    .service-img {
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-    }
-    .service-img:hover {
-        transform: scale(1.05);
-    }
-
-    /* Fade-in animations */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-in.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    footer {
-        background: #222;
-        color: white;
-    }
-</style>
+    .btn-rk{background:var(--rk-accent); border:none;}
+    .btn-rk:hover{background:#26a79c;}
+    .text-rk{color:var(--rk-primary)!important}
+    .bg-rk{background:var(--rk-primary)!important}
+    .hero{background:linear-gradient(180deg, rgba(13,59,102,.92), rgba(13,59,102,.85)), url('https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=1600&auto=format&fit=crop'); background-size:cover; background-position:center;}
+    .shadow-soft{box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .navbar-brand span{letter-spacing:.5px}
+    .feature-icon{width:56px;height:56px;border-radius:1rem}
+    .card-hover{transition:transform .25s ease, box-shadow .25s ease}
+    .card-hover:hover{transform:translateY(-4px); box-shadow:0 1rem 2rem rgba(0,0,0,.12)}
+    .badge-soft{background:rgba(46,196,182,.15); color:var(--rk-accent);}
+    .table thead th{background:#f8fafc}
+    .whatsapp-float{position:fixed; right:18px; bottom:18px; z-index:1040}
+    .back-to-top{position:fixed; right:18px; bottom:88px; z-index:1040; display:none}
+  </style>
 </head>
 <body>
-
-<!-- Hero Section -->
-<header class="hero">
-    <div class="slideshow">
-        <img src="https://source.unsplash.com/1600x900/?business,travel,corporate" alt="">
-        <img src="https://source.unsplash.com/1600x900/?airport,transport" alt="">
-        <img src="https://source.unsplash.com/1600x900/?bus,city" alt="">
-        <img src="https://source.unsplash.com/1600x900/?team,outing" alt="">
-    </div>
-    <div>
-        <h1 class="display-4 fw-bold">RKS Corporate Travels</h1>
-        <p class="lead">Safe, Reliable & Cost-Effective Transportation for IT, BPO & Manufacturing</p>
-        <a href="#contact" class="btn btn-light btn-lg">Get a Free Trial</a>
-    </div>
-</header>
-
-<!-- Services -->
-<section class="container py-5 fade-in" id="services">
-    <h2 class="text-center mb-4">Our Services</h2>
-    <div class="row g-4">
-        <div class="col-md-3 text-center">
-            <img src="https://source.unsplash.com/300x200/?office,car" class="service-img mb-3" alt="Employee Transport">
-            <h5>Employee Pick-Up & Drop</h5>
-            <p>Multiple shift timings, GPS tracking, and verified drivers.</p>
-        </div>
-        <div class="col-md-3 text-center">
-            <img src="https://source.unsplash.com/300x200/?airport,taxi" class="service-img mb-3" alt="Airport Transfer">
-            <h5>Airport Transfers</h5>
-            <p>Fixed rates, sedan/SUV options, executive travel.</p>
-        </div>
-        <div class="col-md-3 text-center">
-            <img src="https://source.unsplash.com/300x200/?team,outing" class="service-img mb-3" alt="Team Outing">
-            <h5>Team Outings & Events</h5>
-            <p>Weekend getaways, resort tie-ups, custom trips.</p>
-        </div>
-        <div class="col-md-3 text-center">
-            <img src="https://source.unsplash.com/300x200/?factory,bus" class="service-img mb-3" alt="Factory Transport">
-            <h5>Factory Staff Transport</h5>
-            <p>Shift-based buses & vans for industrial workforce.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Contact -->
-<section class="bg-light py-5 fade-in" id="contact">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
-        <h2 class="text-center mb-4">Contact Us</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Send</button>
-                </form>
-            </div>
-        </div>
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <i class="bi bi-bus-front-fill fs-3 me-2 text-rk"></i>
+        <span class="fw-bold text-rk">RKS Corporate Travels</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbars">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rates">Rates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#safety">Safety</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-rk ms-lg-3 text-white">Get a Quote</a>
+      </div>
     </div>
-</section>
+  </nav>
 
-<!-- Footer -->
-<footer class="text-center py-3">
-    <p>© 2025 RKS Corporate Travels | Designed with ❤️</p>
-</footer>
+  <!-- HERO -->
+  <header id="home" class="hero text-white py-5 py-lg-6">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge badge-soft rounded-pill px-3 py-2 mb-3">Chennai · 24×7 Shift Support</span>
+          <h1 class="display-5 fw-bold">Employee Transport & Corporate Mobility for IT, BPO & Manufacturing</h1>
+          <p class="lead mt-3">Safe, punctual and cost‑effective daily shuttles, airport transfers and team‑outing logistics. We manage vehicles and drivers so your teams reach on time, every time.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#services" class="btn btn-light text-rk"><i class="bi bi-grid me-2"></i>Explore Services</a>
+            <a href="#contact" class="btn btn-rk text-white"><i class="bi bi-telephone me-2"></i>Talk to Us</a>
+          </div>
+          <div class="mt-3 small opacity-75"><i class="bi bi-geo-alt me-1"></i> Based in Chennai · <i class="bi bi-envelope ms-2 me-1"></i> saranrajrks1998@gmail.com · <i class="bi bi-phone ms-2 me-1"></i> 98844 74983</div>
+        </div>
+        <div class="col-lg-5">
+          <div class="bg-white text-dark rounded-4 p-4 shadow-soft">
+            <h5 class="fw-semibold mb-3"><i class="bi bi-calendar-check me-2 text-rk"></i>Book a Free One‑Week Trial</h5>
+            <form class="row g-3" id="trialForm">
+              <div class="col-12">
+                <label class="form-label">Company Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Shifts</label>
+                <select class="form-select" required>
+                  <option value="" selected disabled>Choose…</option>
+                  <option>General</option>
+                  <option>Day + Night</option>
+                  <option>24×7 Rotational</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="2" placeholder="E.g., 3 routes in OMR + 2 in Ambattur" required></textarea>
+              </div>
+              <div class="col-12 d-grid">
+                <button class="btn btn-rk text-white" type="submit">Request Trial</button>
+              </div>
+              <div class="small text-success d-none" id="trialThanks"><i class="bi bi-check2-circle me-1"></i>Thanks! We’ll contact you shortly.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Fade-in on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target);
-        });
-    }, { threshold: 0.2 });
+  <!-- FEATURES / SERVICES -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Core Services</h2>
+        <p class="text-muted mb-0">Designed for HR/Admin teams managing large workforces</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-hover h-100 border-0 shadow-soft">
+            <div class="card-body">
+              <div class="feature-icon bg-light d-inline-flex align-items-center justify-content-center mb-3"><i class="bi bi-people fs-4 text-rk"></i></div>
+              <h5 class="card-title">Employee Pick‑Up & Drop</h5>
+              <p class="card-text text-muted">Shared cabs/buses for multiple shifts with live GPS tracking and SLA‑based punctuality.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-hover h-100 border-0 shadow-soft">
+            <div class="card-body">
+              <div class="feature-icon bg-light d-inline-flex align-items-center justify-content-center mb-3"><i class="bi bi-airplane fs-4 text-rk"></i></div>
+              <h5 class="card-title">Airport Transfers</h5>
+              <p class="card-text text-muted">Pre‑scheduled executive pickups with fixed corporate rates; Sedan/SUV options.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-hover h-100 border-0 shadow-soft">
+            <div class="card-body">
+              <div class="feature-icon bg-light d-inline-flex align-items-center justify-content-center mb-3"><i class="bi bi-calendar-event fs-4 text-rk"></i></div>
+              <h5 class="card-title">Team Outings</h5>
+              <p class="card-text text-muted">End‑to‑end logistics for offsites, team‑building and weekend getaways with resort tie‑ups.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-hover h-100 border-0 shadow-soft">
+            <div class="card-body">
+              <div class="feature-icon bg-light d-inline-flex align-items-center justify-content-center mb-3"><i class="bi bi-building-gear fs-4 text-rk"></i></div>
+              <h5 class="card-title">Factory Staff Shuttles</h5>
+              <p class="card-text text-muted">Dedicated route planning for industrial shifts with emergency vehicle‑on‑demand.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
+  <!-- RATES -->
+  <section id="rates" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <h2 class="fw-bold mb-3">Transparent Corporate Rates</h2>
+          <p class="text-muted">Indicative pricing — tailored to route distance, timing and vehicle type. Monthly contracts and per‑trip billing available.</p>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><i class="bi bi-shield-check me-2 text-rk"></i>Verified drivers with ID & background checks</li>
+            <li class="mb-2"><i class="bi bi-clock-history me-2 text-rk"></i>On‑time SLAs with monthly performance reports</li>
+            <li class="mb-2"><i class="bi bi-geo me-2 text-rk"></i>Live GPS tracking for safety and compliance</li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          <div class="table-responsive shadow-soft rounded-3">
+            <table class="table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Service Type</th>
+                  <th>Vehicle</th>
+                  <th>Rate (₹)</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Daily Employee Drop</td>
+                  <td>Sedan</td>
+                  <td>₹18/km</td>
+                  <td>Min 15 km per trip</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>SUV</td>
+                  <td>₹22/km</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Shuttle Van (12‑Seater)</td>
+                  <td>Van</td>
+                  <td>₹1,600/day</td>
+                  <td>2 shifts</td>
+                </tr>
+                <tr>
+                  <td>Shuttle Bus (20+ seat)</td>
+                  <td>Mini/Bus</td>
+                  <td>₹2,800/day</td>
+                  <td>2 shifts</td>
+                </tr>
+                <tr>
+                  <td>Airport Transfer</td>
+                  <td>Sedan</td>
+                  <td>₹900 flat</td>
+                  <td>Within 30 km</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>SUV</td>
+                  <td>₹1,200 flat</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Weekend Outing</td>
+                  <td>Mini Bus</td>
+                  <td>₹4,500/day</td>
+                  <td>Fuel included</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-3">
+            <button class="btn btn-rk text-white" data-bs-toggle="modal" data-bs-target="#quoteModal"><i class="bi bi-receipt me-2"></i>Request Custom Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section id="safety" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Safety & Compliance</h2>
+        <p class="text-muted">Built for night‑shift operations and enterprise policies</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 h-100 shadow-soft">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-shield-lock me-2 text-rk"></i>GPS + Panic Button</h5>
+              <p class="card-text text-muted">All vehicles are GPS‑enabled with central monitoring and in‑trip SOS support.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 h-100 shadow-soft">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-person-badge me-2 text-rk"></i>Driver Vetting</h5>
+              <p class="card-text text-muted">Background verification, periodic training and alcohol‑free policy with random checks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 h-100 shadow-soft">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-clipboard-data me-2 text-rk"></i>Monthly Reports</h5>
+              <p class="card-text text-muted">On‑time percentage, route optimization insights and incident summaries for audits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS / TESTIMONIALS -->
+  <section id="clients" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Trusted by Corporate Teams</h2>
+        <p class="text-muted">Sample feedback from partner companies</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card border-0 h-100 shadow-soft">
+            <div class="card-body">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-quote fs-2 text-rk me-2"></i>
+                <div>
+                  <p class="mb-1">“RKS reduced late arrivals by 28% in our night shift within the first month.”</p>
+                  <small class="text-muted">Admin Manager, IT Park (OMR)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border-0 h-100 shadow-soft">
+            <div class="card-body">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-quote fs-2 text-rk me-2"></i>
+                <div>
+                  <p class="mb-1">“Responsive team, clean vehicles and transparent billing — great for audits.”</p>
+                  <small class="text-muted">HR Lead, BPO — Guindy</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">Contact Us</h2>
+          <p class="text-muted">We’ll respond within the hour for corporate queries.</p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-geo-alt text-rk me-2"></i>Chennai, Tamil Nadu</li>
+            <li class="mb-2"><i class="bi bi-telephone text-rk me-2"></i>98844 74983</li>
+            <li class="mb-2"><i class="bi bi-envelope text-rk me-2"></i>saranrajrks1998@gmail.com</li>
+          </ul>
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-soft">
+            <iframe title="Map" src="https://maps.google.com/maps?q=Chennai&t=&z=11&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-soft">
+            <div class="card-body p-4">
+              <h5 class="fw-semibold mb-3">Send an Enquiry</h5>
+              <form class="row g-3" id="enquiryForm">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Company Email</label>
+                  <input type="email" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone</label>
+                  <input type="tel" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Service</label>
+                  <select class="form-select" required>
+                    <option value="" selected disabled>Select</option>
+                    <option>Employee Transport</option>
+                    <option>Airport Transfers</option>
+                    <option>Team Outing</option>
+                    <option>Factory Shuttle</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" rows="3" placeholder="Routes, shift timings, vehicle preference…" required></textarea>
+                </div>
+                <div class="col-12 d-grid">
+                  <button class="btn btn-rk text-white" type="submit">Submit Enquiry</button>
+                </div>
+                <div class="small text-success d-none" id="enquiryThanks"><i class="bi bi-check2-circle me-1"></i>Thanks! We’ll get back shortly.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">RKS Corporate Travels</h5>
+          <p class="text-white-50 mb-2">Employee transportation and corporate mobility in Chennai.</p>
+          <div class="small text-white-50">© <span id="year"></span> RKS Corporate Travels. All rights reserved.</div>
+        </div>
+        <div class="col-md-6">
+          <h6 class="fw-semibold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a class="link-light link-offset-2 link-underline-opacity-0" href="#services">Services</a></li>
+            <li><a class="link-light link-offset-2 link-underline-opacity-0" href="#rates">Rates</a></li>
+            <li><a class="link-light link-offset-2 link-underline-opacity-0" href="#safety">Safety</a></li>
+            <li><a class="link-light link-offset-2 link-underline-opacity-0" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <a class="btn btn-success rounded-circle p-3 whatsapp-float" href="https://wa.me/919884474983" target="_blank" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <button id="backToTop" class="btn btn-secondary rounded-circle p-3 back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Quote Modal -->
+  <div class="modal fade" id="quoteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Request Custom Quote</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3" id="quoteForm">
+            <div class="col-12">
+              <label class="form-label">Company</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Contact</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Requirement</label>
+              <textarea class="form-control" rows="3" placeholder="e.g., 5 routes, night shift, SUV + Van" required></textarea>
+            </div>
+            <div class="col-12 d-grid">
+              <button class="btn btn-rk text-white" type="submit">Send Request</button>
+            </div>
+            <div class="small text-success d-none" id="quoteThanks"><i class="bi bi-check2-circle me-1"></i>Request received! We’ll email you soon.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple form handlers (demo only)
+    function handleForm(id, thanksId){
+      const form = document.getElementById(id);
+      const thanks = document.getElementById(thanksId);
+      form?.addEventListener('submit', function(e){
+        e.preventDefault();
+        form.reset();
+        thanks.classList.remove('d-none');
+        setTimeout(()=>thanks.classList.add('d-none'), 4000);
+      });
+    }
+    handleForm('trialForm','trialThanks');
+    handleForm('enquiryForm','enquiryThanks');
+    handleForm('quoteForm','quoteThanks');
+
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY > 400){ backToTop.style.display='inline-flex'; }
+      else{ backToTop.style.display='none'; }
     });
-</script>
+    backToTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+  </script>
 </body>
 </html>
